@@ -1,5 +1,6 @@
 #Paulo Drefahl
 #This program consists basically in a quiz game made with python using the library Tkinter, it is about our COP1500 class and python. 
+#PLEASE, this program was not optimized to fullscreen, I highly recommend using in window size. Thank you.
 
 from tkinter import *
 
