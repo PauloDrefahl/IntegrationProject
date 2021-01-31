@@ -1,6 +1,8 @@
+#Paulo Drefahl
+#This program consists basically in a quiz game made with python using the library Tkinter, it is about our COP1500 class and python. 
+
 from tkinter import *
 
-#score variable
 score = 0
 
 class Application:
