@@ -1,13 +1,105 @@
-#Paulo Drefahl
-#This program consists basically in a quiz game made with python using the library Tkinter, it is about our COP1500 class and python. 
-#PLEASE, this program was not optimized to fullscreen, I highly recommend using in window size. Thank you.
-
 from tkinter import *
+#Name: Paulo Henrique Mocelin Drefahl
+#This is my integration Project for COP1500 - Intro to Computer Science. I have been working on it since our first class
+#It consists basically in a Quiz about our class, a calculator, and a String operator. To built the graphic interface I
+#used a library called TKinter.
 
-score = 0
+#Instructions: 1 - Run the code, and look at the prompt.
+# 2- Now, Write your name and click on "greetings" button.
+# 3- Then, choose an application and test it. To test more the other applications, close and run the .py file again
 
+#The following lines of code were created based on the requirements, they will be printed in the prompt.
+#The main program will be displayed in a graphic interface.
+print("On","this","sentence","the","commas","spaces","will","be","substitute", "for", "dashes", sep='-')
+print("I also know",end=" ")
+print("to use the 'end='")
+
+#Main Program
+
+#Calculator Application
+def calcenter():
+    main_screen.destroy()
+    root = Tk()
+    root.geometry("500x500+100+100")
+    root.title("Calculator COP 1500 - Intro to computer science By Paulo Drefahl")
+    calculator(root)
+    root.mainloop()
+class calculator:
+    def __init__(self,master=None):
+        self.widget2 = Frame(master)
+        self.widget2.pack()
+        self.n1 = DoubleVar()
+        self.n2 = DoubleVar()
+        self.numbers()
+
+#Aritmatic Operators
+    def sum1(self):
+        self.result = self.n1.get() + self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans","20")
+        self.label1.pack()
+
+    def sub1(self):
+        self.result = self.n1.get() - self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans", "20")
+        self.label1.pack()
+
+    def mult1(self):
+        self.result = self.n1.get() * self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans", "20")
+        self.label1.pack()
+
+    def exp1(self):
+        self.result = self.n1.get() ** self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans", "20")
+        self.label1.pack()
+
+    def div1(self):
+        self.result = self.n1.get() / self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans", "20")
+        self.label1.pack()
+
+    def rest1(self):
+        self.result = self.n1.get() % self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans", "20")
+        self.label1.pack()
+
+    def comp_div1(self):
+        self.result = self.n1.get() // self.n2.get()
+        self.label1 = Label(self.widget2, text="Result: {}".format(self.result))
+        self.label1['font'] = ("Open Sans", "20")
+        self.label1.pack()
+
+    def numbers(self):
+        self.label1 = Label(self.widget2, text="First Number:").pack()
+        self.number1 = (Entry(self.widget2, textvar=self.n1).pack())
+        self.label2 = Label(self.widget2, text="Second Number").pack()
+        self.number2 = (Entry(self.widget2, textvar=self.n2).pack())
+        self.plus = Button(text="+",font="Verdana",command=self.sum1).pack()
+        self.minus = Button(text="-",font="Verdana",command=self.sub1).pack()
+        self.mult = Button(text="*",font="Verdana",command=self.mult1).pack()
+        self.expo = Button(text="**",font="Verdana",command=self.exp1).pack()
+        self.div = Button(text="/",font="Verdana",command=self.div1).pack()
+        self.restof = Button(text="%",font="Verdana",command=self.rest1).pack()
+        self.compdiv = Button(text="//",font="Verdana",command=self.comp_div1).pack()
+
+
+#Quiz Application
+def quizenter():
+    main_screen.destroy()
+    root = Tk()
+    root.title("Quiz COP 1500 - Intro to computer science By Paulo Drefahl")
+    root.geometry("1600x800+100+100")
+    Application(root)
+    root.mainloop()
 class Application:
-    #Confg Window
+
+    #Confg quiz Application
     def __init__(self,master=None):
         self.widget1 = Frame(master)
         self.widget1.pack()
@@ -79,7 +171,7 @@ class Application:
         self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',command=lambda:[self.add_points(), self.score_screen()]).place(x=400, y=550)
         self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',command=self.score_screen).place(x=850, y=550)
 
-    #Main Screen
+    #Quiz Widgets
     def title(self):
         self.title = Label(self.widget1, text="Quiz COP 1500 Intro to computer science")
         self.title["font"] = ("Open Sans","40","italic","bold")
@@ -101,9 +193,65 @@ class Application:
         self.start = Button(text="start",font="Verdana", bg="#BEBEBE", width=30, height=3,command=self.question1).place(x=650,y=250)
 
 
-#Starting Graphic Interface
-root = Tk()
-root.title("Quiz COP 1500 - Intro to computer science By Paulo Drefahl")
-root.geometry("1600x800+100+100")
-Application(root)
-root.mainloop()
+#String operators Application
+def stringenter():
+    main_screen.destroy()
+    root = Tk()
+    root.geometry("500x500+100+100")
+    root.title("String operator COP 1500 - Intro to computer science By Paulo Drefahl")
+    string_application(root)
+    root.mainloop()
+class string_application:
+    def __init__(self,master=None):
+        self.str1 = StringVar()
+        self.str2 = StringVar()
+        self.n_rep = IntVar()
+        self.widget3 = Frame(master)
+        self.widget3.pack()
+        self.labelstr = Label(self.widget3, text="Type a String").pack()
+        self.string1 = (Entry(self.widget3, textvar=self.str1).pack())
+        self.labelstr1 = Label(self.widget3, text="+").pack()
+        self.labelstr2 = Label(self.widget3, text="Type another String").pack()
+        self.string2 = (Entry(self.widget3, textvar=self.str2).pack())
+        self.times = Label(self.widget3, text="Number of repetitions (integer)").pack()
+        self.rep = (Entry(self.widget3, textvar=self.n_rep).pack())
+        self.buttonrep = Button(text="Enter",font="Verdana",command=self.repete).pack()
+
+    def repete(self):
+        self.result_rep = (self.str1.get() + self.str2.get()) * self.n_rep.get()
+        self.final_str = Label(self.widget3, text="Result:\n {}".format(self.result_rep)).pack()
+
+
+
+
+#Starting Main Graphic Interface and Global variables
+main_screen = Tk()
+main_screen.geometry("420x400+100+100")
+main_screen.title("COP 1500 - integration project by Paulo Drefahl")
+score = 0
+
+#Greetings
+def greetings():
+    labelgret['text'] = "Welcome {}!".format(username.get())
+usernameLbl = Label(text="Name:")
+usernameLbl["font"] = ("Open Sans","15")
+usernameLbl.pack()
+initLabel = Label(text="Choose the Application:")
+username = StringVar()
+usernameentry = (Entry(textvar=username).pack())
+labelgret = Label(text="")
+labelgret["font"] = ("Open Sans","20")
+labelgret.pack()
+Greetings =  Button(text="Greetings", font="Verdana", command=greetings).pack()
+initLabel["font"] = ("Open Sans","20")
+initLabel.pack()
+
+
+
+#Buttons to Choose Aplication
+buttonquiz = Button(text="Quiz", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',command=quizenter).pack()
+buttoncal = Button(text="Calculator", font="Verdana", bg="#33B8EB", width=35, height=3, bd=5, relief='ridge',command=calcenter).pack()
+buttonstring = Button(text="String Operator", font="Verdana", bg="red", width=35, height=3, bd=5, relief='ridge',command=stringenter).pack()
+main_screen.mainloop()
+
+#sources: "Curso em video - Udemy (portuguese Brazil)", "Python docummentation", "Tkinter docummentation"
