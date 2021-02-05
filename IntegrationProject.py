@@ -4,15 +4,10 @@ from tkinter import *
 #It consists basically in a Quiz about our class, a calculator, and a String operator. To built the graphic interface I
 #used a library called TKinter.
 
-#Instructions: 1 - Run the code, and look at the prompt.
+#Instructions: 1 - Run the code.
 # 2- Now, Write your name and click on "greetings" button.
 # 3- Then, choose an application and test it. To test more the other applications, close and run the .py file again
 
-#The following lines of code were created based on the requirements, they will be printed in the prompt.
-#The main program will be displayed in a graphic interface.
-print("On","this","sentence","the","commas","spaces","will","be","substitute", "for", "dashes", sep='-')
-print("I also know",end=" ")
-print("to use the 'end='")
 
 #Main Program
 
