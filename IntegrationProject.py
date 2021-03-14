@@ -2,7 +2,7 @@ from tkinter import *
 import time
 #Name: Paulo Henrique Mocelin Drefahl
 #This is my integration Project for COP1500 - Intro to Computer Science. I have been working on it since our first class
-#It consists basically in a Quiz about our class, a calculator, and a String operator. To built the graphic interface I
+#It consists basically in a Quiz about our class, calculator, String operator and Data Analyzer. To built the graphic interface I
 #used a library called TKinter.
 
 #Instructions: 1 - Run the code, and look at the prompt.
