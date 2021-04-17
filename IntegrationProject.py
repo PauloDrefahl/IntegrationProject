@@ -3,6 +3,7 @@ This is my integration Project for COP1500 - Intro to Computer Science. I have b
 It consists basically in a Quiz about our class, a calculator, and a String operator. To built the graphic interface I
 used a library called TKinter.
 Main Program"""
+
 __author__ = "Paulo Drefahl"
 
 try:
@@ -159,7 +160,8 @@ class Application:
         self.title()
         self.description()
         self.start_button()
-        self.frame2 = Frame(self.widget1, width=1300, height=700, bg='#A59F9D', bd=10, relief='ridge').pack(side=BOTTOM)
+        self.frame2 = Frame(self.widget1, width=1300, height=700, bg='#A59F9D',
+                            bd=10, relief='ridge').pack(side=BOTTOM)
         self.score = 0
 
     # Score System
@@ -177,12 +179,15 @@ class Application:
         """
         self.show_score = Label(self.frame2, bg="#BEBEBE",
                                 text='Your Score:' + str(self.score) + '/10\n Thank you for testing my program!!',
-                                bd=10, relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=680)
+                                bd=10, relief='ridge', font="Verdana", width=50,
+                                height=4).place(x=550, y=680)
         self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="Quiz Finished !!", bd=10, relief='ridge',
                                    font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="------", font="Verdana", bg="#23E863", width=35, height=3, bd=5,
+        self.button1 = Button(text="------", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5,
                               relief='ridge').place(x=400, y=550)
-        self.button2 = Button(text="------", font="Verdana", bg="#F22E24", width=35, height=3, bd=5,
+        self.button2 = Button(text="------", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5,
                               relief='ridge').place(x=850, y=550)
         pass
 
@@ -192,11 +197,15 @@ class Application:
 
         :return:
         """
-        self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="The name of our instructor is Guido van Rossum",
-                                   bd=10, relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.quiz_question = Label(self.frame2, bg="#BEBEBE",
+                                   text="The name of our instructor is Guido van Rossum",
+                                   bd=10, relief='ridge', font="Verdana", width=50,
+                                   height=4).place(x=550, y=380)
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question2).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question2(), self.add_points()]).place(x=850, y=550)
 
     def question2(self):
@@ -204,11 +213,16 @@ class Application:
 
         :return:
         """
-        self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="The name of our student assistent is Rachel", bd=10,
-                                   relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.quiz_question = Label(self.frame2, bg="#BEBEBE",
+                                   text="The name of our student assistent is Rachel",
+                                   bd=10,
+                                   relief='ridge', font="Verdana", width=50,
+                                   height=4).place(x=550, y=380)
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question3(), self.add_points()]).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question3).place(x=850, y=550)
 
     def question3(self):
@@ -216,11 +230,15 @@ class Application:
 
         :return:
         """
-        self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="We are learning python in this semester", bd=10,
-                                   relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.quiz_question = Label(self.frame2, bg="#BEBEBE",
+                                   text="We are learning python in this semester", bd=10,
+                                   relief='ridge', font="Verdana", width=50,
+                                   height=4).place(x=550, y=380)
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863",
+                              width=35, height=3, bd=5, relief='ridge',
                               command=lambda: [self.question4(), self.add_points()]).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24",
+                              width=35, height=3, bd=5, relief='ridge',
                               command=self.question4).place(x=850, y=550)
 
     def question4(self):
@@ -228,11 +246,15 @@ class Application:
 
         :return:
         """
-        self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="Python is considered a low level language", bd=10,
-                                   relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.quiz_question = Label(self.frame2, bg="#BEBEBE",
+                                   text="Python is considered a low level language", bd=10,
+                                   relief='ridge', font="Verdana", width=50,
+                                   height=4).place(x=550, y=380)
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question5).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question5(), self.add_points()]).place(x=850, y=550)
 
     def question5(self):
@@ -240,11 +262,14 @@ class Application:
 
         :return:
         """
-        self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="Python is a OOP language", bd=10, relief='ridge',
+        self.quiz_question = Label(self.frame2, bg="#BEBEBE",
+                                   text="Python is a OOP language", bd=10, relief='ridge',
                                    font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863",
+                              width=35, height=3, bd=5, relief='ridge',
                               command=lambda: [self.question6(), self.add_points()]).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24",
+                              width=35, height=3, bd=5, relief='ridge',
                               command=self.question6).place(x=850, y=550)
 
     def question6(self):
@@ -253,11 +278,14 @@ class Application:
         :return:
         """
         self.quiz_question = Label(self.frame2, bg="#BEBEBE",
-                                   text="Python was created in the late 1980s by Scott Vanselow", bd=10, relief='ridge',
+                                   text="Python was created in the late 1980s by Scott Vanselow",
+                                   bd=10, relief='ridge',
                                    font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question7).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question7(), self.add_points()]).place(x=850, y=550)
 
     def question7(self):
@@ -266,11 +294,14 @@ class Application:
         :return:
         """
         self.quiz_question = Label(self.frame2, bg="#BEBEBE",
-                                   text="Python supports multiple assignments in one statement", bd=10, relief='ridge',
+                                   text="Python supports multiple assignments in one statement",
+                                   bd=10, relief='ridge',
                                    font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question8(), self.add_points()]).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question8).place(x=850, y=550)
 
     def question8(self):
@@ -278,11 +309,15 @@ class Application:
 
         :return:
         """
-        self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="Functions can't return multiple values", bd=10,
-                                   relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.quiz_question = Label(self.frame2, bg="#BEBEBE",
+                                   text="Functions can't return multiple values", bd=10,
+                                   relief='ridge', font="Verdana", width=50,
+                                   height=4).place(x=550, y=380)
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question9).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question9(), self.add_points()]).place(x=850, y=550)
 
     def question9(self):
@@ -291,10 +326,13 @@ class Application:
         :return:
         """
         self.quiz_question = Label(self.frame2, bg="#BEBEBE", text="We can do a Certification Exam to get extra credit",
-                                   bd=10, relief='ridge', font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+                                   bd=10, relief='ridge', font="Verdana", width=50,
+                                   height=4).place(x=550, y=380)
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=lambda: [self.question10(), self.add_points()]).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.question10).place(x=850, y=550)
 
     def question10(self):
@@ -303,11 +341,14 @@ class Application:
         :return:
         """
         self.quiz_question = Label(self.frame2, bg="#BEBEBE",
-                                   text="We need should study 6-9hrs / week outside the class", bd=10, relief='ridge',
+                                   text="We need should study 6-9hrs / week outside the class",
+                                   bd=10, relief='ridge',
                                    font="Verdana", width=50, height=4).place(x=550, y=380)
-        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+        self.button1 = Button(text="TRUE", font="Verdana", bg="#23E863", width=35, height=3,
+                              bd=5, relief='ridge',
                               command=lambda: [self.add_points(), self.score_screen()]).place(x=400, y=550)
-        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35, height=3, bd=5, relief='ridge',
+        self.button2 = Button(text="FALSE", font="Verdana", bg="#F22E24", width=35,
+                              height=3, bd=5, relief='ridge',
                               command=self.score_screen).place(x=850, y=550)
 
     # Quiz Widgets
@@ -343,7 +384,8 @@ class Application:
 
         :return:
         """
-        self.start = Button(text="start", font="Verdana", bg="#BEBEBE", width=30, height=3,
+        self.start = Button(text="start", font="Verdana", bg="#BEBEBE",
+                            width=30, height=3,
                             command=self.question1).place(x=650, y=250)
 
 
@@ -506,7 +548,8 @@ class DataanalyzerApplication:
         self.labeldataapp.pack()
         self.main_data = StringVar()
         self.dataentry = (Entry(textvar=self.main_data).pack())
-        self.analyzebutton = Button(text="Analyze Data", font="Verdana", bg="#A59F9D", width=15, height=2, bd=5,
+        self.analyzebutton = Button(text="Analyze Data", font="Verdana",
+                                    bg="#A59F9D", width=15, height=2, bd=5,
                                     relief='ridge', command=self.analize_it).pack()
         self.labeldataapp1 = Label(text="type anything:")
         self.labeldataapp1["font"] = ("Open Sans", "15")
@@ -573,7 +616,8 @@ class GraphFuncApplication:
         self.b["font"] = ("Open Sans", "15")
         self.b.pack()
         self.mentry = (Entry(textvar=self.bvalue).pack())
-        self.graphbutton = Button(text="graph", font="Verdana", bg="#A59F9D", width=15, height=2, bd=5, relief='ridge',
+        self.graphbutton = Button(text="graph", font="Verdana", bg="#A59F9D",
+                                  width=15, height=2, bd=5, relief='ridge',
                                   command=self.graphthis).pack()
 
         # Quadratic Equation
@@ -596,7 +640,8 @@ class GraphFuncApplication:
         self.c["font"] = ("Open Sans", "15")
         self.c.pack()
         self.centry = (Entry(textvar=self.cvalue).pack())
-        self.graphparabolabutton = Button(text="graph", font="Verdana", bg="#A59F9D", width=15, height=2, bd=5,
+        self.graphparabolabutton = Button(text="graph", font="Verdana", bg="#A59F9D",
+                                          width=15, height=2, bd=5,
                                           relief='ridge',
                                           command=self.graphthisparabola).pack()
 
@@ -632,15 +677,20 @@ initLabel.pack()
 
 # Buttons to Choose Aplication
 
-buttonquiz = Button(text="Quiz", font="Verdana", bg="#23E863", width=35, height=3, bd=5, relief='ridge',
+buttonquiz = Button(text="Quiz", font="Verdana", bg="#23E863", width=35,
+                    height=3, bd=5, relief='ridge',
                     command=quizenter).pack()
-buttoncal = Button(text="Calculator", font="Verdana", bg="#33B8EB", width=35, height=3, bd=5, relief='ridge',
+buttoncal = Button(text="Calculator", font="Verdana", bg="#33B8EB", width=35,
+                   height=3, bd=5, relief='ridge',
                    command=calcenter).pack()
-buttonstring = Button(text="String Operator", font="Verdana", bg="red", width=35, height=3, bd=5, relief='ridge',
+buttonstring = Button(text="String Operator", font="Verdana", bg="red", width=35,
+                      height=3, bd=5, relief='ridge',
                       command=stringenter).pack()
-buttonanalyzer = Button(text="Data Analyzer", font="Verdana", bg="grey", width=35, height=3, bd=5, relief='ridge',
+buttonanalyzer = Button(text="Data Analyzer", font="Verdana", bg="grey", width=35,
+                        height=3, bd=5, relief='ridge',
                         command=dataenter).pack()
-buttonfuncgraph = Button(text="Graph Tool", font="Verdana", bg="orange", width=35, height=3, bd=5, relief='ridge',
+buttonfuncgraph = Button(text="Graph Tool", font="Verdana", bg="orange", width=35,
+                         height=3, bd=5, relief='ridge',
                          command=funcenter).pack()
 main_screen.mainloop()
 
